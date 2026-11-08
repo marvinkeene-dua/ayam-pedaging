@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ms" data-theme="gelap">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Rekod harian ladang ayam pedaging: populasi, kematian, dedak dan jadual vaksin setiap reban." />
+    <meta name="theme-color" content="#0c0b0a" />
+    <title>Ayam Pedaging: rekod harian ladang</title>
+    <script>
+      // Tetapkan tema sebelum cat pertama supaya tiada kelipan.
+      try {
+        var t = JSON.parse(localStorage.getItem('ap.v2.tema') || '"gelap"');
+        if (t === 'cerah' || t === 'gelap') document.documentElement.dataset.theme = t;
+        document.querySelector('meta[name="theme-color"]').content = t === 'cerah' ? '#faf9f6' : '#0c0b0a';
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
